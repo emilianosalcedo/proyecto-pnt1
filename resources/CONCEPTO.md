@@ -7,7 +7,7 @@ Integrantes:
 3. Salcedo Emiliano
 4. Agustin Nicolas Moguilevsky
 
-*Objetivo*: Se quiere desarrollar una aplicación de administración de peluquería para ayudar a controlar de manera más efectiva sus turnos y clientes. 
+**Objetivo**: Se quiere desarrollar una aplicación de administración de peluquería para ayudar a controlar de manera más efectiva sus turnos y clientes. 
 La aplicación podría permitir al negocio registrar a los clientes, actualizar sus datos y darlos de baja si por alguna razón ya no desean usar los servicios de la peluquería. También permite a los clientes reservar turnos, modificarlos o cancelarlos. 
 De esta manera, se permite reducir los errores y malentendidos que pueden surgir de una mala gestión y brindar una mejor experiencia al cliente.
 
