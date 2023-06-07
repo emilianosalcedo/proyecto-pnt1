@@ -1,9 +1,14 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
+using Peluqueria.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,8 +28,23 @@ namespace Peluqueria
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                // This lambda determines whether user consent for nonessential cookies is needed for a given request.
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+            services.AddDbContext<PeluqueriaDatabaseContext>(options =>
+            options.UseSqlServer(Configuration["ConnectionString:PeluqueriaDBConnection"
+            ]));
+            services.AddMvc()
+                .AddNewtonsoftJson(options =>
+           options.SerializerSettings.ReferenceLoopHandling =
+           ReferenceLoopHandling.Ignore)
+
+           .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
