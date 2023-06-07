@@ -8,6 +8,8 @@ namespace Peluqueria.Models
 {
     public class Turno
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public DateTime FechaHora { get; set; }
         public bool Atendido { get; set; }
@@ -17,7 +19,7 @@ namespace Peluqueria.Models
         public int ClienteId { get; set; }
         public Usuario Cliente { get; set; }
 
-        public int PeluqueroId { get; set; }
-        public Usuario Peluquero { get; set; }
+        //public int PeluqueroId { get; set; }
+        //public Usuario Peluquero { get; set; }
     }
 }
