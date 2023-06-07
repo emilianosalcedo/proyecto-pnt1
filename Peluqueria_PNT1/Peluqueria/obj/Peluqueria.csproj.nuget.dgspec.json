@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Juani\\OneDrive\\Escritorio\\Escritorio\\Facultad ORT\\PNT1\\Proyecto\\Peluqueria_PNT1\\Peluqueria\\Peluqueria.csproj": {}
+    "C:\\Users\\Abril\\source\\repos\\proyecto-pnt1\\Peluqueria_PNT1\\Peluqueria\\Peluqueria.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Juani\\OneDrive\\Escritorio\\Escritorio\\Facultad ORT\\PNT1\\Proyecto\\Peluqueria_PNT1\\Peluqueria\\Peluqueria.csproj": {
+    "C:\\Users\\Abril\\source\\repos\\proyecto-pnt1\\Peluqueria_PNT1\\Peluqueria\\Peluqueria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Juani\\OneDrive\\Escritorio\\Escritorio\\Facultad ORT\\PNT1\\Proyecto\\Peluqueria_PNT1\\Peluqueria\\Peluqueria.csproj",
+        "projectUniqueName": "C:\\Users\\Abril\\source\\repos\\proyecto-pnt1\\Peluqueria_PNT1\\Peluqueria\\Peluqueria.csproj",
         "projectName": "Peluqueria",
-        "projectPath": "C:\\Users\\Juani\\OneDrive\\Escritorio\\Escritorio\\Facultad ORT\\PNT1\\Proyecto\\Peluqueria_PNT1\\Peluqueria\\Peluqueria.csproj",
-        "packagesPath": "C:\\Users\\Juani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Juani\\OneDrive\\Escritorio\\Escritorio\\Facultad ORT\\PNT1\\Proyecto\\Peluqueria_PNT1\\Peluqueria\\obj\\",
+        "projectPath": "C:\\Users\\Abril\\source\\repos\\proyecto-pnt1\\Peluqueria_PNT1\\Peluqueria\\Peluqueria.csproj",
+        "packagesPath": "C:\\Users\\Abril\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Abril\\source\\repos\\proyecto-pnt1\\Peluqueria_PNT1\\Peluqueria\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Juani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Abril\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,29 +45,10 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.32, 3.1.32]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -76,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
         }
       }
     }
