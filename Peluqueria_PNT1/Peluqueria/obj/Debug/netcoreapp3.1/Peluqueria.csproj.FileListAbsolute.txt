@@ -36,3 +36,45 @@ C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\n
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.pdb
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.genruntimeconfig.cache
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.csproj.CopyComplete
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\bin\Debug\netcoreapp3.1\Peluqueria.StaticWebAssets.xml
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\bin\Debug\netcoreapp3.1\Peluqueria.exe
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\bin\Debug\netcoreapp3.1\Peluqueria.deps.json
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\bin\Debug\netcoreapp3.1\Peluqueria.runtimeconfig.json
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\bin\Debug\netcoreapp3.1\Peluqueria.runtimeconfig.dev.json
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\bin\Debug\netcoreapp3.1\Peluqueria.dll
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\bin\Debug\netcoreapp3.1\Peluqueria.pdb
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\bin\Debug\netcoreapp3.1\Peluqueria.Views.dll
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\bin\Debug\netcoreapp3.1\Peluqueria.Views.pdb
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.csproj.AssemblyReference.cache
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.AssemblyInfoInputs.cache
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.AssemblyInfo.cs
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.csproj.CoreCompileInputs.cache
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.RazorAssemblyInfo.cache
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.RazorAssemblyInfo.cs
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\staticwebassets\Peluqueria.StaticWebAssets.Manifest.cache
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\staticwebassets\Peluqueria.StaticWebAssets.Pack.cache
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.Peluqueria.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.Peluqueria.props
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.Peluqueria.props
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.Peluqueria.props
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.TagHelpers.input.cache
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.TagHelpers.output.cache
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.RazorCoreGenerate.cache
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.RazorTargetAssemblyInfo.cache
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.RazorTargetAssemblyInfo.cs
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.Views.pdb
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.dll
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.pdb
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.genruntimeconfig.cache
+C:\Users\Juani\OneDrive\Escritorio\Escritorio\Facultad ORT\PNT1\Proyecto\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.csproj.CopyComplete
