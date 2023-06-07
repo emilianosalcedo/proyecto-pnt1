@@ -29,10 +29,10 @@ namespace Peluqueria.Context
                .WithMany()
                .HasForeignKey(t => t.ClienteId);
 
-            modelBuilder.Entity<Turno>()
-                .HasOne(t => t.Peluquero)
-                .WithMany()
-                .HasForeignKey(t => t.PeluqueroId);
+            //modelBuilder.Entity<Turno>()
+            //    .HasOne(t => t.Peluquero)
+            //    .WithMany()
+            //    .HasForeignKey(t => t.PeluqueroId);
         }
 
     }
