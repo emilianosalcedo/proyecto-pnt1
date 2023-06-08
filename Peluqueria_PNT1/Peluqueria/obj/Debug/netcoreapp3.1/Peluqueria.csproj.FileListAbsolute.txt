@@ -318,3 +318,8 @@ C:\Users\esalcedo\Downloads\pnt1\pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netco
 C:\Users\esalcedo\Downloads\pnt1\pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Servicio\Details.cshtml.g.cs
 C:\Users\esalcedo\Downloads\pnt1\pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Servicio\Edit.cshtml.g.cs
 C:\Users\esalcedo\Downloads\pnt1\pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Servicio\Index.cshtml.g.cs
+C:\Users\esalcedo\Downloads\pnt1\pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Turno\Create.cshtml.g.cs
+C:\Users\esalcedo\Downloads\pnt1\pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Turno\Delete.cshtml.g.cs
+C:\Users\esalcedo\Downloads\pnt1\pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Turno\Details.cshtml.g.cs
+C:\Users\esalcedo\Downloads\pnt1\pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Turno\Edit.cshtml.g.cs
+C:\Users\esalcedo\Downloads\pnt1\pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Turno\Index.cshtml.g.cs
