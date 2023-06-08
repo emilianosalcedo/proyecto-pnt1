@@ -8567,19 +8567,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Abril\\.nuget\\packages\\": {}
+    "C:\\Users\\esalcedo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Abril\\source\\repos\\proyecto-pnt1\\Peluqueria_PNT1\\Peluqueria\\Peluqueria.csproj",
+      "projectUniqueName": "C:\\Users\\esalcedo\\Downloads\\pnt1\\pnt1\\Peluqueria_PNT1\\Peluqueria\\Peluqueria.csproj",
       "projectName": "Peluqueria",
-      "projectPath": "C:\\Users\\Abril\\source\\repos\\proyecto-pnt1\\Peluqueria_PNT1\\Peluqueria\\Peluqueria.csproj",
-      "packagesPath": "C:\\Users\\Abril\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Abril\\source\\repos\\proyecto-pnt1\\Peluqueria_PNT1\\Peluqueria\\obj\\",
+      "projectPath": "C:\\Users\\esalcedo\\Downloads\\pnt1\\pnt1\\Peluqueria_PNT1\\Peluqueria\\Peluqueria.csproj",
+      "packagesPath": "C:\\Users\\esalcedo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\esalcedo\\Downloads\\pnt1\\pnt1\\Peluqueria_PNT1\\Peluqueria\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Abril\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\esalcedo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8642,7 +8642,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.426\\RuntimeIdentifierGraph.json"
       }
     }
   }
