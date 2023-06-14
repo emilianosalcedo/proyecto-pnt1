@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+## C#
+applicationhost.config
+Peluqueria.csproj.FileListAbsolute.txt
+Debug/
+bin/
