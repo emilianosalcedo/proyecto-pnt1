@@ -108,3 +108,5 @@ applicationhost.config
 Peluqueria.csproj.FileListAbsolute.txt
 Debug/
 bin/
+g.cs
+.suo
