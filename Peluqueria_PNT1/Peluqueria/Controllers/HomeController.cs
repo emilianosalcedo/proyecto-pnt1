@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Peluqueria.Models;
 using System;
@@ -18,12 +19,16 @@ namespace Peluqueria.Controllers
             _logger = logger;
         }
 
+  
         public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        public IActionResult Cliente()
+        {
+            return View();
+        }
+        public IActionResult Peluquero()
         {
             return View();
         }

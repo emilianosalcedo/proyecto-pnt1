@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -43,6 +44,20 @@ namespace Peluqueria
            ReferenceLoopHandling.Ignore)
 
            .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+        .AddCookie(options =>
+        {
+            options.LoginPath = "/Login/IniciarSesion"; // Ruta de la página de inicio de sesión
+            options.LogoutPath = "/Login/CerrarSesion"; // Ruta para cerrar sesión
+        });
+            services.AddDistributedMemoryCache();
+            services.AddSession(options =>
+            {
+                options.Cookie.Name = "Peluqueria.Session";
+                options.IdleTimeout = TimeSpan.FromMinutes(20);
+                options.Cookie.IsEssential = true;
+            });
         }
 
 
@@ -63,15 +78,18 @@ namespace Peluqueria
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication(); 
             app.UseAuthorization();
+           
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Login}/{action=IniciarSesion}/{id?}");
             });
+
         }
     }
 }

@@ -26,6 +26,19 @@ namespace Peluqueria.Controllers
             return View(await peluqueriaDatabaseContext.ToListAsync());
         }
 
+        // GET: Turno
+        public async Task<IActionResult> IndexTurno(int id, Rol rol)
+        {
+            if (rol == Rol.PELUQUERO) {
+                var peluqueriaDatabaseContext = _context.Turno.Include(t => t.Cliente).Include(t => t.Servicio).Where(t => t.PeluqueroId == id); ;
+                return View(await peluqueriaDatabaseContext.ToListAsync());
+                }
+            else if (rol == Rol.CLIENTE) {
+                var peluqueriaDatabaseContext = _context.Turno.Include(t => t.Cliente).Include(t => t.Servicio).Where(t => t.ClienteId == id);
+                return View(await peluqueriaDatabaseContext.ToListAsync()); }
+            return null;
+        }
+
         // GET: Turno/Details/5
         public async Task<IActionResult> Details(int? id)
         {
