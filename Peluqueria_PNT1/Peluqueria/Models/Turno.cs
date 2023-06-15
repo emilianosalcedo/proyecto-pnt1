@@ -20,7 +20,7 @@ namespace Peluqueria.Models
         public int ClienteId { get; set; }
         public Usuario Cliente { get; set; }
 
-        //public int PeluqueroId { get; set; }
+        public int PeluqueroId { get; set; }
         //public Usuario Peluquero { get; set; }
     }
 }

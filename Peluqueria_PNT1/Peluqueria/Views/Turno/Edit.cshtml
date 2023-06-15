@@ -3,7 +3,14 @@
 @{
     ViewData["Title"] = "Edit";
 }
+@using Microsoft.AspNetCore.Http
+@using Newtonsoft.Json
 
+
+@{
+    var usuarioLogueado = Context.Session.GetString("Usuario");
+    var usuario = JsonConvert.DeserializeObject<Usuario>(usuarioLogueado);
+}
 <h1>Edit</h1>
 
 <h4>Turno</h4>
@@ -29,11 +36,6 @@
                 <span asp-validation-for="ServicioId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ClienteId" class="control-label"></label>
-                <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId"></select>
-                <span asp-validation-for="ClienteId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
@@ -41,7 +43,16 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    @if (usuario.Rol == Rol.PELUQUERO || usuario.Rol == Rol.CLIENTE)
+    {
+
+        <a asp-action="IndexTurno" asp-route-id="@usuario.Id" asp-route-rol="@usuario.Rol">Back to List</a>
+    }
+    else
+    {
+        <a asp-action="Index">Back to List</a>
+    }
+
 </div>
 
 @section Scripts {

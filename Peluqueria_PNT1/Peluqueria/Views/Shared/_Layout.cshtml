@@ -1,4 +1,13 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+@using Newtonsoft.Json
+
+
+@{
+    var usuarioLogueado = Context.Session.GetString("Usuario");
+    var usuario= JsonConvert.DeserializeObject<Usuario>(usuarioLogueado);
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -18,21 +27,37 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Index">Usuario</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Servicio" asp-action="Index">Servicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Turno" asp-action="Index">Turno</a>
-                        </li>
+                        @switch (usuario.Rol)
+                        {
+                            case Rol.ADMINISTRADOR:
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Index">Usuario</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Servicio" asp-action="Index">Servicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Turno" asp-action="Index">Turno</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="CerrarSesion">Cerrar Sesion</a>
+                                </li>
+                                break;
+                            case Rol.CLIENTE:
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Turno" asp-action="IndexTurno" asp-route-id="@usuario.Id" asp-route-rol="@usuario.Rol">Turno</a>
+                                </li>
+                                break;
+                            case Rol.PELUQUERO:
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Turno"  asp-action="IndexTurno" asp-route-id="@usuario.Id" asp-route-rol="@usuario.Rol">Turno</a>
+                                </li>
+                                break;
+                        }
+
                     </ul>
                 </div>
             </div>
