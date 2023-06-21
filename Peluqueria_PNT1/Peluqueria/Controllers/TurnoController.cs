@@ -20,22 +20,22 @@ namespace Peluqueria.Controllers
         }
 
         // GET: Turno
-        public async Task<IActionResult> Index()
-        {
-            var peluqueriaDatabaseContext = _context.Turno.Include(t => t.Cliente).Include(t => t.Servicio);
-            return View(await peluqueriaDatabaseContext.ToListAsync());
-        }
-
-        // GET: Turno
         public async Task<IActionResult> IndexTurno(int id, Rol rol)
         {
-            if (rol == Rol.PELUQUERO) {
+            if (rol == Rol.PELUQUERO)
+            {
                 var peluqueriaDatabaseContext = _context.Turno.Include(t => t.Cliente).Include(t => t.Servicio).Where(t => t.PeluqueroId == id); ;
                 return View(await peluqueriaDatabaseContext.ToListAsync());
-                }
-            else if (rol == Rol.CLIENTE) {
+            }
+            else if (rol == Rol.CLIENTE)
+            {
                 var peluqueriaDatabaseContext = _context.Turno.Include(t => t.Cliente).Include(t => t.Servicio).Where(t => t.ClienteId == id);
-                return View(await peluqueriaDatabaseContext.ToListAsync()); }
+                return View(await peluqueriaDatabaseContext.ToListAsync());
+            }
+            else if (rol == Rol.ADMINISTRADOR) {
+                var peluqueriaDatabaseContext = _context.Turno.Include(t => t.Cliente).Include(t => t.Servicio);
+                return View(await peluqueriaDatabaseContext.ToListAsync());
+            }
             return null;
         }
 
@@ -62,8 +62,9 @@ namespace Peluqueria.Controllers
         // GET: Turno/Create
         public IActionResult Create()
         {
-            ViewData["ClienteId"] = new SelectList(_context.Usuarios, "Id", "Id");
-            ViewData["ServicioId"] = new SelectList(_context.Servicio, "Id", "Id");
+            ViewData["PeluqueroId"] = new SelectList(_context.Usuarios.Where(u => u.Rol == Rol.PELUQUERO), "Id", "NombreCompleto");
+            ViewData["ClienteId"] = new SelectList(_context.Usuarios.Where(u => u.Rol == Rol.CLIENTE), "Id", "Nombre");
+            ViewData["ServicioId"] = new SelectList(_context.Servicio, "Id", "Descripcion");
             return View();
         }
 
@@ -78,10 +79,11 @@ namespace Peluqueria.Controllers
             {
                 _context.Add(turno);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(IndexTurno));
             }
-            ViewData["ClienteId"] = new SelectList(_context.Usuarios, "Id", "Id", turno.ClienteId);
-            ViewData["ServicioId"] = new SelectList(_context.Servicio, "Id", "Id", turno.ServicioId);
+            ViewData["PeluqueroId"] = new SelectList(_context.Usuarios.Where(u => u.Rol == Rol.PELUQUERO), "Id", "Nombre", turno.PeluqueroId);
+            ViewData["ClienteId"] = new SelectList(_context.Usuarios.Where(u => u.Rol == Rol.CLIENTE), "Id", "Nombre", turno.ClienteId);
+            ViewData["ServicioId"] = new SelectList(_context.Servicio, "Id", "Descripcion", turno.ServicioId);
             return View(turno);
         }
 
@@ -98,8 +100,9 @@ namespace Peluqueria.Controllers
             {
                 return NotFound();
             }
-            ViewData["ClienteId"] = new SelectList(_context.Usuarios, "Id", "Id", turno.ClienteId);
-            ViewData["ServicioId"] = new SelectList(_context.Servicio, "Id", "Id", turno.ServicioId);
+            ViewData["PeluqueroId"] = new SelectList(_context.Usuarios.Where(u => u.Rol == Rol.PELUQUERO), "Id", "Nombre", turno.PeluqueroId);
+            ViewData["ClienteId"] = new SelectList(_context.Usuarios.Where(u => u.Rol == Rol.CLIENTE), "Id", "Nombre", turno.ClienteId);
+            ViewData["ServicioId"] = new SelectList(_context.Servicio, "Id", "Descripcion", turno.ServicioId);
             return View(turno);
         }
 
@@ -133,10 +136,11 @@ namespace Peluqueria.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(IndexTurno));
             }
-            ViewData["ClienteId"] = new SelectList(_context.Usuarios, "Id", "Id", turno.ClienteId);
-            ViewData["ServicioId"] = new SelectList(_context.Servicio, "Id", "Id", turno.ServicioId);
+            ViewData["PeluqueroId"] = new SelectList(_context.Usuarios.Where(u => u.Rol == Rol.PELUQUERO), "Id", "Nombre");
+            ViewData["ClienteId"] = new SelectList(_context.Usuarios.Where(u => u.Rol == Rol.CLIENTE), "Id", "Nombre");
+            ViewData["ServicioId"] = new SelectList(_context.Servicio, "Id", "Descripcion", turno.ServicioId);
             return View(turno);
         }
 
@@ -168,7 +172,7 @@ namespace Peluqueria.Controllers
             var turno = await _context.Turno.FindAsync(id);
             _context.Turno.Remove(turno);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(IndexTurno));
         }
 
         private bool TurnoExists(int id)

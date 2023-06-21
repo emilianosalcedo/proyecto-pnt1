@@ -23,5 +23,8 @@ namespace Peluqueria.Models
         [EnumDataType(typeof(Rol))]
         public Rol Rol {get; set; }
 
+        public string NombreCompleto { get => Nombre + " " + Apellido; }
     }
+
+
 }

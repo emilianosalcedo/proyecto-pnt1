@@ -45,15 +45,8 @@
 </div>
 
 <div>
-    @if (usuario.Rol == Rol.PELUQUERO || usuario.Rol == Rol.CLIENTE)
-    {
-
         <a asp-action="IndexTurno" asp-route-id="@usuario.Id" asp-route-rol="@usuario.Rol">Back to List</a>
-    }
-    else
-    {
-        <a asp-action="Index">Back to List</a>
-    }
+
 </div>
 
 @section Scripts {
