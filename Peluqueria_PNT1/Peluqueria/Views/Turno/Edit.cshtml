@@ -31,29 +31,29 @@
                 </label>
             </div>
             <div class="form-group">
-                <label asp-for="ClienteId" class="control-label"></label>
+                <label asp-for="ClienteId" class="control-label">Cliente</label>
                 <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId"></select>
                 <span asp-validation-for="ClienteId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PeluqueroId" class="control-label"></label>
+                <label asp-for="PeluqueroId" class="control-label">Peluquero</label>
                 <select asp-for="PeluqueroId" class="form-control" asp-items="ViewBag.PeluqueroId"></select>
                 <span asp-validation-for="PeluqueroId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ServicioId" class="control-label"></label>
+                <label asp-for="ServicioId" class="control-label">Servicio</label>
                 <select asp-for="ServicioId" class="form-control" asp-items="ViewBag.ServicioId"></select>
                 <span asp-validation-for="ServicioId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Guardar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-        <a asp-action="IndexTurno" asp-route-id="@usuario.Id" asp-route-rol="@usuario.Rol">Back to List</a>
+        <a asp-action="IndexTurno">Volver a la lista</a>
 
 </div>
 

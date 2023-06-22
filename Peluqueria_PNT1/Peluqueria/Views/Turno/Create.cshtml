@@ -20,7 +20,7 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="FechaHora" class="control-label"></label>
+                <label asp-for="FechaHora" class="control-label">Fecha y hora</label>
                 <input asp-for="FechaHora" class="form-control" />
                 <span asp-validation-for="FechaHora" class="text-danger"></span>
             </div>
@@ -30,22 +30,26 @@
                 </label>
             </div>
             <div class="form-group">
-                <label asp-for="ServicioId" class="control-label"></label>
+                <label asp-for="ServicioId" class="control-label">Servicio</label>
                 <select asp-for="ServicioId" class="form-control" asp-items="ViewBag.ServicioId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="ClienteId" class="control-label"></label>
+                <label asp-for="ClienteId" class="control-label">Cliente</label>
                 <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <label asp-for="PeluqueroId" class="control-label">Peluquero</label>
+                <select asp-for="PeluqueroId" class="form-control" asp-items="ViewBag.PeluqueroId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear nuevo turno" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-        <a asp-action="IndexTurno" asp-route-id="@usuario.Id" asp-route-rol="@usuario.Rol">Back to List</a>
+        <a asp-action="IndexTurno">Volver a la lista</a>
 
 </div>
 
