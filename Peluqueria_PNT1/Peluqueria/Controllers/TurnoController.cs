@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using Peluqueria.Context;
 using Peluqueria.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace Peluqueria.Controllers
 {
@@ -20,11 +22,15 @@ namespace Peluqueria.Controllers
         }
 
         // GET: Turno
-        public async Task<IActionResult> IndexTurno(int id, Rol rol)
+        public async Task<IActionResult> IndexTurno()
         {
+            string usuarioLogueado = HttpContext.Session.GetString("Usuario");
+            Usuario usuario = JsonConvert.DeserializeObject<Usuario>(usuarioLogueado);
+            int id = usuario.Id;
+            Rol rol = usuario.Rol;
             if (rol == Rol.PELUQUERO)
             {
-                var peluqueriaDatabaseContext = _context.Turno.Include(t => t.Cliente).Include(t => t.Servicio).Where(t => t.PeluqueroId == id); ;
+                var peluqueriaDatabaseContext = _context.Turno.Include(t => t.Cliente).Include(t => t.Servicio).Where(t => t.PeluqueroId == id);
                 return View(await peluqueriaDatabaseContext.ToListAsync());
             }
             else if (rol == Rol.CLIENTE)
@@ -73,7 +79,7 @@ namespace Peluqueria.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FechaHora,Atendido,ServicioId,ClienteId")] Turno turno)
+        public async Task<IActionResult> Create([Bind("Id,FechaHora,Atendido,ServicioId,ClienteId,PeluqueroId")] Turno turno)
         {
             if (ModelState.IsValid)
             {
@@ -111,7 +117,7 @@ namespace Peluqueria.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FechaHora,Atendido,ServicioId,ClienteId")] Turno turno)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FechaHora,Atendido,ServicioId,ClienteId,PeluqueroId")] Turno turno)
         {
             if (id != turno.Id)
             {

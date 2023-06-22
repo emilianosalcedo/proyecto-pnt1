@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace Peluqueria.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        [DisplayName("Fecha y Hora")]
         public DateTime FechaHora { get; set; }
         public bool Atendido { get; set; }
         public int ServicioId { get; set; }

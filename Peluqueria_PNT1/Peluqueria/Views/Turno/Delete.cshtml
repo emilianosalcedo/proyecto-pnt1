@@ -34,21 +34,21 @@
             @Html.DisplayNameFor(model => model.Servicio)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Servicio.Id)
+            @Html.DisplayFor(model => model.Servicio.Descripcion)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Cliente)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Cliente.Id)
+            @Html.DisplayFor(model => model.Cliente.NombreCompleto)
         </dd>
     </dl>
 
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
 
-            <a asp-action="IndexTurno" asp-route-id="@usuario.Id" asp-route-rol="@usuario.Rol">Back to List</a>
+            <a asp-action="IndexTurno">Volver a la lista</a>
 
     </form>
 </div>

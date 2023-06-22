@@ -24,6 +24,11 @@ namespace Peluqueria.Controllers
         {
             return View();
         }
+
+        public IActionResult TeamOne()
+        {
+            return View();
+        }
         public IActionResult Cliente()
         {
             return View();
