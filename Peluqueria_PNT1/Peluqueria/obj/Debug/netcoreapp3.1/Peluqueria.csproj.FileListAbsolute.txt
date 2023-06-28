@@ -339,3 +339,5 @@ C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\n
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.dll
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.pdb
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.genruntimeconfig.cache
+C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.csproj.AssemblyReference.cache
+C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Visualizador\VisualizadorPreciosServicios.cshtml.g.cs
