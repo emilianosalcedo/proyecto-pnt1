@@ -44,11 +44,13 @@
                     @Html.DisplayFor(modelItem => item.Cliente.NombreCompleto)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Ver</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
-                </td>
-            </tr>
+                  @if (!item.Atendido)
+                    {
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar </a> 
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar </a> 
+                    }
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Ver</a>
+</tr>
         }
     </tbody>
 </table>

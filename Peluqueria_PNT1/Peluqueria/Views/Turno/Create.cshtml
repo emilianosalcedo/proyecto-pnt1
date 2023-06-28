@@ -19,28 +19,66 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="FechaHora" class="control-label">Fecha y hora</label>
-                <input asp-for="FechaHora" class="form-control" />
-                <span asp-validation-for="FechaHora" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Atendido" /> @Html.DisplayNameFor(model => model.Atendido)
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="ServicioId" class="control-label">Servicio</label>
-                <select asp-for="ServicioId" class="form-control" asp-items="ViewBag.ServicioId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="ClienteId" class="control-label">Cliente</label>
-                <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="PeluqueroId" class="control-label">Peluquero</label>
-                <select asp-for="PeluqueroId" class="form-control" asp-items="ViewBag.PeluqueroId"></select>
-            </div>
+            @switch (usuario.Rol)
+            {
+                case Rol.ADMINISTRADOR:
+                    <div class="form-group">
+                        <label asp-for="FechaHora" class="control-label">Fecha y hora</label>
+                        <input asp-for="FechaHora" class="form-control" />
+                        <span asp-validation-for="FechaHora" class="text-danger"></span>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Atendido" /> @Html.DisplayNameFor(model => model.Atendido)
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ServicioId" class="control-label">Servicio</label>
+                        <select asp-for="ServicioId" class="form-control" asp-items="ViewBag.ServicioId"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ClienteId" class="control-label">Cliente</label>
+                        <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PeluqueroId" class="control-label">Peluquero</label>
+                        <select asp-for="PeluqueroId" class="form-control" asp-items="ViewBag.PeluqueroId"></select>
+                    </div>
+
+                    break;
+                case Rol.CLIENTE:
+                    <div class="form-group">
+                        <label asp-for="FechaHora" class="control-label">Fecha y hora</label>
+                        <input asp-for="FechaHora" class="form-control" />
+                        <span asp-validation-for="FechaHora" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="ServicioId" class="control-label">Servicio</label>
+                        <select asp-for="ServicioId" class="form-control" asp-items="ViewBag.ServicioId"></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="PeluqueroId" class="control-label">Peluquero</label>
+                        <select asp-for="PeluqueroId" class="form-control" asp-items="ViewBag.PeluqueroId"></select>
+                    </div>
+                    break;
+                case Rol.PELUQUERO:
+                    <div class="form-group">
+                        <label asp-for="FechaHora" class="control-label">Fecha y hora</label>
+                        <input asp-for="FechaHora" class="form-control" />
+                        <span asp-validation-for="FechaHora" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ServicioId" class="control-label">Servicio</label>
+                        <select asp-for="ServicioId" class="form-control" asp-items="ViewBag.ServicioId"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ClienteId" class="control-label">Cliente</label>
+                        <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId"></select>
+                    </div>
+                    break;
+            }
             <div class="form-group">
                 <input type="submit" value="Crear nuevo turno" class="btn btn-primary" />
             </div>
@@ -55,4 +93,4 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+            }
