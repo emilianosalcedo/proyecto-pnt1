@@ -1,9 +1,3 @@
-[filesystem "Ubuntu|11.0.7|11.0.8|11.0.9.1|/dev/sda1"]
-  timestampResolution = 8000 nanoseconds
-  minRacyThreshold = 3609 microseconds
-[user]
-  name = Emiliano Salcedo
-  email = 5517717+emilianosalcedo@users.noreply.github.com
 [init]
   defaultBranch = main
 [core]
