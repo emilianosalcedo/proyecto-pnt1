@@ -1,5 +1,7 @@
 # Proyecto PNT1
 
+![test](resources/test.gif)
+
 [Definición](resources/CONCEPTO.md)
 
 ## Diagrama
