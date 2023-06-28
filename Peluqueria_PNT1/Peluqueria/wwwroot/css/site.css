@@ -24,6 +24,10 @@ a {
   border-color: #1861ac;
 }
 
+a.nav-link.text-dark:hover {
+    text-shadow: 1px 1px 2px black !important;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
