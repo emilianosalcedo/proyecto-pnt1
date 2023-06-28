@@ -11,6 +11,7 @@
     var usuarioLogueado = Context.Session.GetString("Usuario");
     var usuario = JsonConvert.DeserializeObject<Usuario>(usuarioLogueado);
 }
+<link rel="stylesheet" href="~/css/formStyle.css" />
 <h1>Edit</h1>
 
 <h4>Turno</h4>
@@ -107,7 +108,7 @@
                     break;
             }
             <div class="form-group">
-                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <input type="submit" value="Guardar" class="bottonAccion btn" />
             </div>
         </form>
     </div>

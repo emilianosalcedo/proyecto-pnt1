@@ -5,8 +5,10 @@
 @model Usuario
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/loginStyle.css" />
     <div class="text-center">
-        <h2>Iniciar Sesión</h2>
+        <img src="~/images/logo.png" />
+        <h1>Iniciar Sesión</h1>
 
         @using (Html.BeginForm())
         {
@@ -14,16 +16,16 @@
 
             <div class="form-group">
                 @Html.LabelFor(model => model.Email)
-                @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "example@mail.com" })
                 @Html.ValidationMessageFor(model => model.Email)
             </div>
 
             <div class="form-group">
                 @Html.LabelFor(model => model.Contrasenia)
-                @Html.PasswordFor(model => model.Contrasenia, new { @class = "form-control" })
+                @Html.PasswordFor(model => model.Contrasenia, new { @class = "form-control", placeholder = "Ingrese su contraseña" })
                 @Html.ValidationMessageFor(model => model.Contrasenia)
             </div>
 
-            <input type="submit" value="Iniciar Sesión" class="btn btn-primary" />
+            <input type="submit" value="Iniciar Sesión" class="bottonInicio btn" />
         }
     </div>

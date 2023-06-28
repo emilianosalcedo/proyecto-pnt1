@@ -13,21 +13,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Peluqueria</title>
+    <link rel="stylesheet" href="~/css/layoutStyle.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
             <div class="container">
+                <img src="~/images/logo.png" class="logoImage" />
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Peluqueria</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="menu navbar-nav flex-grow-1">
                         @switch (usuario.Rol)
                         {
                             case Rol.ADMINISTRADOR:
@@ -47,9 +49,6 @@
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Visualizador" asp-action="Index">Visualizadores</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="CerrarSesion">Cerrar Sesion</a>
-                                </li>
-                                <li class="nav-item">
                                     <img src="~/images/logo.jpeg" width="30px" height="30px" />
                                     <label class="navbar-text text-dark">@usuario.NombreCompleto</label>
                                 </li>
@@ -59,15 +58,13 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Turno" asp-action="IndexTurno">Turno</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="CerrarSesion">Cerrar Sesion</a>
-                                </li>
                                 break;
 
                         }
 
                     </ul>
                 </div>
+                <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="CerrarSesion">Cerrar Sesion</a>
             </div>
         </nav>
     </header>
