@@ -1,0 +1,150 @@
+﻿@model List<Peluqueria.Models.TurnoEstadistica>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>VISUALIZADOR:</h1>
+<h2>CANTIDAD DE TURNOS POR AÑO</h2>
+
+<select id="yearSelect">
+    <option value="" selected>Seleccione un año</option>
+    @foreach (var statistic in Model.Select(x => x.Año).Distinct())
+    {
+        <option value="@statistic">@statistic</option>
+    }
+</select>
+
+
+<table id="turnoTable" class="table table-bordered m-3">
+    <thead>
+        <tr>
+            <th>Año</th>
+            <th>Mes</th>
+            <th>Cantidad de Turnos</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var statistic in Model)
+        {
+            <tr data-year="@statistic.Año">
+                <td class="text-center">@statistic.Año</td>
+                <td class="text-center">@statistic.Mes</td>
+                <td class="text-center">@statistic.Cantidad</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+
+<canvas id="myChart"></canvas>
+
+<script>
+    var monthLabels = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+    var turnoData = [];
+
+    var dataMap = {};
+
+    @foreach (var statistic in Model)
+    {
+        <text>
+        var year = "@(statistic.Año)";
+        var monthIndex = @(statistic.Mes - 1);
+        var turnoCount = @(statistic.Cantidad);
+
+        if (dataMap[year] === undefined) {
+            dataMap[year] = [];
+        }
+
+        dataMap[year][monthIndex] = turnoCount;
+        </text>
+    }
+
+    var selectedYear = "";
+    var maxTurnoCount = 0;
+    var turnoData = [];
+
+    function updateChartData() {
+        turnoData = [];
+        if (selectedYear === "") {
+            for (var i = 0; i < 12; i++) {
+                var maxCount = 0;
+                for (var year in dataMap) {
+                    var count = dataMap[year][i] || 0;
+                    if (count > maxCount) {
+                        maxCount = count;
+                    }
+                }
+                turnoData.push(maxCount);
+            }
+            maxTurnoCount = Math.max(...turnoData);
+        } else {
+            if (dataMap[selectedYear] !== undefined) {
+                turnoData = dataMap[selectedYear];
+                maxTurnoCount = Math.max(...turnoData);
+            } else {
+                turnoData = [];
+                maxTurnoCount = 0;
+            }
+        }
+
+        chart.data.datasets[0].data = turnoData;
+        chart.data.datasets[0].backgroundColor = turnoData.map((count, index) => (turnoData[index] === maxTurnoCount && selectedYear === "") ? 'rgba(0, 255, 0, 0.5)' : 'rgba(54, 162, 235, 0.5)');
+        chart.update();
+    }
+
+    var options = {
+        scales: {
+            y: {
+                beginAtZero: true,
+                precision: 0,
+                title: {
+                    display: true,
+                    text: 'Cantidad de Turnos'
+                },
+                ticks: {
+                    stepSize: 1
+                }
+            },
+            x: {
+                title: {
+                    display: true,
+                    text: 'Meses'
+                }
+            }
+        }
+    };
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: monthLabels,
+            datasets: [{
+                label: 'Cantidad de Turnos por mes',
+                data: turnoData,
+                backgroundColor: turnoData.map((count, index) => (turnoData[index] === maxTurnoCount && selectedYear === "") ? 'rgba(0, 255, 0, 0.5)' : 'rgba(54, 162, 235, 0.5)'),
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: options
+    });
+
+    document.getElementById("yearSelect").addEventListener("change", function () {
+        selectedYear = this.value;
+        var tableRows = document.querySelectorAll("#turnoTable tbody tr");
+
+        tableRows.forEach(function (row) {
+            var year = row.getAttribute("data-year");
+
+            if (selectedYear === "" || year === selectedYear) {
+                row.style.display = "table-row";
+            } else {
+                row.style.display = "none";
+            }
+        });
+
+        updateChartData();
+    });
+</script>

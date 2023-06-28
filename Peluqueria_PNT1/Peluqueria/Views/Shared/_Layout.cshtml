@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="~/css/layoutStyle.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -42,19 +43,29 @@
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Servicio" asp-action="Index">Servicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Turno" asp-action="Index">Turno</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Turno" asp-action="IndexTurno">Turno</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Visualizador" asp-action="Index">Visualizadores</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="CerrarSesion">Cerrar Sesion</a>
+                                </li>
+                                <li class="nav-item">
+                                    <img src="~/images/logo.jpeg" width="30px" height="30px" />
+                                    <label class="navbar-text text-dark">@usuario.NombreCompleto</label>
                                 </li>
                                 break;
                             case Rol.CLIENTE:
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Turno" asp-action="IndexTurno" asp-route-id="@usuario.Id" asp-route-rol="@usuario.Rol">Turno</a>
-                                </li>
-                                break;
                             case Rol.PELUQUERO:
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Turno" asp-action="IndexTurno" asp-route-id="@usuario.Id" asp-route-rol="@usuario.Rol">Turno</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Turno" asp-action="IndexTurno">Turno</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="CerrarSesion">Cerrar Sesion</a>
                                 </li>
                                 break;
+
                         }
 
                     </ul>
@@ -71,7 +82,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - Peluqueria - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - Peluqueria - <a asp-area="" asp-controller="Home" asp-action="TeamOne">TeamOne</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

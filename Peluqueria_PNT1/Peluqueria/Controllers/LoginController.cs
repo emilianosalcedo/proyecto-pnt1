@@ -36,32 +36,36 @@ namespace Peluqueria.Controllers
         [HttpPost]
         public async Task<IActionResult> IniciarSesion(Usuario usuario)
         {
-            var usuarioEncontrado = _context.Usuarios.FirstOrDefaultAsync(m => m.Email == usuario.Email && m.Contrasenia == usuario.Contrasenia);
-            if (usuarioEncontrado != null)
+            try
             {
-                var claims = new List<Claim>
+                var usuarioEncontrado = _context.Usuarios.FirstOrDefaultAsync(m => m.Email == usuario.Email && m.Contrasenia == usuario.Contrasenia);
+                if (usuarioEncontrado != null)
+                {
+                    var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, usuario.Email),
             };
 
-                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                string usuarioJson = JsonConvert.SerializeObject(usuarioEncontrado.Result); 
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    string usuarioJson = JsonConvert.SerializeObject(usuarioEncontrado.Result);
 
-                HttpContext.Session.SetString("Usuario", usuarioJson);
-               
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
-                switch(usuarioEncontrado.Result.Rol)
-                {
-                    case Rol.ADMINISTRADOR:
-                        return RedirectToAction("Index", "Home");
-                    case Rol.CLIENTE:
-                        return RedirectToAction("Cliente", "Home");
-                    case Rol.PELUQUERO:
-                        return RedirectToAction("Peluquero", "Home");
-                }          
+                    HttpContext.Session.SetString("Usuario", usuarioJson);
+
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+                    switch (usuarioEncontrado.Result.Rol)
+                    {
+                        case Rol.ADMINISTRADOR:
+                            return RedirectToAction("Index", "Home");
+                        case Rol.CLIENTE:
+                            return RedirectToAction("Cliente", "Home");
+                        case Rol.PELUQUERO:
+                            return RedirectToAction("Peluquero", "Home");
+                    }
+                }
             }
-
-            ModelState.AddModelError("", "Nombre de usuario o contraseña incorrectos");
+            catch {
+                ModelState.AddModelError("", "Nombre de usuario o contraseña incorrectos"); 
+            }
             return View(usuario);
         }
 

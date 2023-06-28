@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Visualizadores</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>VISUALIZADORES</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Turnos Solicitados</h5>
+                        <a class="card-link text-dark" asp-area="" asp-controller="Visualizador" asp-action="VisualizadorTurnosSolicitados">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Servicios solicitados</h5>
+                        <a class="card-link text-dark" asp-area="" asp-controller="Visualizador" asp-action="VisualizadorServiciosSolicitados">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Peluqueros solicitados</h5>
+                        <a class="card-link text-dark" asp-area="" asp-controller="Visualizador" asp-action="VisualizadorPeluquerosSolicitados">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

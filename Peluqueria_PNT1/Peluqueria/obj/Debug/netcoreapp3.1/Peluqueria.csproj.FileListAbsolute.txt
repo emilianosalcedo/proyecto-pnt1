@@ -149,7 +149,6 @@ C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\bin\Debug\n
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.csproj.AssemblyReference.cache
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Create.cshtml.g.cs
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Delete.cshtml.g.cs
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Details.cshtml.g.cs
@@ -331,8 +330,13 @@ C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\n
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Turno\Delete.cshtml.g.cs
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Turno\Details.cshtml.g.cs
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Turno\Edit.cshtml.g.cs
-C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Turno\Index.cshtml.g.cs
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Login\IniciarSesion.cshtml.g.cs
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Home\Cliente.cshtml.g.cs
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Home\Peluquero.cshtml.g.cs
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Turno\IndexTurno.cshtml.g.cs
+C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Home\TeamOne.cshtml.g.cs
+C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Visualizador\VisualizadorTurnosSolicitados.cshtml.g.cs
+C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Visualizador\VisualizadorPeluquerosSolicitados.cshtml.g.cs
+C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Visualizador\VisualizadorServiciosSolicitados.cshtml.g.cs
+C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Visualizador\Index.cshtml.g.cs
+C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.csproj.AssemblyReference.cache

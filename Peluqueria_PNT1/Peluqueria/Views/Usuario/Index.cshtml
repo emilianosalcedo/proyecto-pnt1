@@ -4,10 +4,10 @@
     ViewData["Title"] = "Index";
 }
 <link rel="stylesheet" href="~/css/indexStyle.css" />
-<h1>Index</h1>
+<h1>Usuarios</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Crear nuevo usuario</a>
 </p>
 <table class="table">
     <thead>
@@ -29,10 +29,7 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Telefono)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contrasenia)
-            </th>
+            </th>   
             <th>
                 @Html.DisplayNameFor(model => model.Rol)
             </th>
@@ -61,15 +58,12 @@
                 @Html.DisplayFor(modelItem => item.Telefono)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Contrasenia)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Rol)
             </td>
             <td class="contendorBotones">
-                <a style="width: 32%" asp-action="Edit" asp-route-id="@item.Id"><button class="bottonEntidad">Edit</button></a>
-                <a style="width: 32%" asp-action="Details" asp-route-id="@item.Id"><button class="bottonEntidad">Details</button></a>
-                <a style="width: 32%" asp-action="Delete" asp-route-id="@item.Id"><button class="bottonEntidad">Delete</button></a>
+                <a style="width: 32%" asp-action="Edit" asp-route-id="@item.Id"><button class="bottonEntidad">Editar</button></a>
+                <a style="width: 32%" asp-action="Details" asp-route-id="@item.Id"><button class="bottonEntidad">Ver</button></a>
+                <a style="width: 32%" asp-action="Delete" asp-route-id="@item.Id"><button class="bottonEntidad">Eliminar</button></a>
             </td>
         </tr>
 }
