@@ -142,6 +142,19 @@ namespace Peluqueria.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,FechaHora,Atendido,ServicioId,ClienteId,PeluqueroId")] Turno turno)
         {
+            string usuarioLogueado = HttpContext.Session.GetString("Usuario");
+            Usuario usuario = JsonConvert.DeserializeObject<Usuario>(usuarioLogueado);
+            Rol rol = usuario.Rol;
+
+            if (rol == Rol.CLIENTE)
+            {
+                turno.ClienteId = usuario.Id;
+            }
+            else if (rol == Rol.PELUQUERO)
+            {
+                turno.PeluqueroId = usuario.Id;
+            }
+
             if (id != turno.Id)
             {
                 return NotFound();
