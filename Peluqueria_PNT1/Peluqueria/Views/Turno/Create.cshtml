@@ -11,6 +11,7 @@
     var usuarioLogueado = Context.Session.GetString("Usuario");
     var usuario = JsonConvert.DeserializeObject<Usuario>(usuarioLogueado);
 }
+<link rel="stylesheet" href="~/css/formStyle.css" />
 <h1>Create</h1>
 
 <h4>Turno</h4>
@@ -38,7 +39,7 @@
                 <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="bottonAccion btn" />
             </div>
         </form>
     </div>
