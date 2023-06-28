@@ -110,3 +110,4 @@ Debug/
 bin/
 g.cs
 .suo
+*.config
