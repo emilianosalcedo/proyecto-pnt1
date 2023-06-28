@@ -1,0 +1,27 @@
+﻿body {
+    background-color: #f6e0b5;
+}
+
+table {
+    background-color: #eea990;
+}
+
+tbody tr {
+    background-color: #6c757d;
+    color: #dee2e6;
+}
+
+.bottonEntidad {
+    background-color: #aa6f73;
+    font-weight: bold;
+    width: 100%;
+}
+
+    .bottonEntidad:hover {
+        background-color: #f6e0b5; /* Cambia el color al pasar el mouse sobre el botón */
+    }
+
+.contendorBotones {
+    display: flex;
+    justify-content: space-evenly;
+}

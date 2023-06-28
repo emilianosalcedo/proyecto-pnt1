@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Peluqueria.Models.Servicio>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="~/css/indexStyle.css" />
+<h1>Servicios</h1>
+
+<p>
+    <a asp-action="Create">Crear nuevo servicio</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Duracion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duracion)
+            </td>
+            <td class="contendorBotones">
+                <a style="width: 32%" asp-action="Edit" asp-route-id="@item.Id"><button class="bottonEntidad">Editar</button></a>
+                <a style="width: 32%" asp-action="Details" asp-route-id="@item.Id"><button class="bottonEntidad">Ver</button></a>
+                <a style="width: 32%" asp-action="Delete" asp-route-id="@item.Id"><button class="bottonEntidad">Eliminar</button></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

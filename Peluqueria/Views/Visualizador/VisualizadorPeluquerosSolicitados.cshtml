@@ -1,0 +1,37 @@
+﻿@model List<Peluqueria.Models.PeluqueroEstadistica>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="contenedor_canvas">
+    <h1>VISUALIZADOR:</h1>
+    <h2>CANTIDAD DE TURNOS POR PELUQUERO</h2>
+
+    <canvas id="myChart"></canvas>
+    @section Scripts {
+
+        <script>
+        var peluquero = @Html.Raw(Json.Serialize(Model.Select(s => s.NombrePeluquero)));
+        var cantidadesTurnos = @Html.Raw(Json.Serialize(Model.Select(s => s.CantidadTurnos)));
+
+        var colores = ['rgba(75, 192, 192, 0.2)', 'rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(153, 102, 255, 0.2)'];
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: peluquero,
+                datasets: [{
+                    label: 'Cantidad de Turnos',
+                    data: cantidadesTurnos,
+                    backgroundColor: colores,
+                    borderColor: 'rgba(0, 0, 0, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+            }
+        });
+        </script>
+        </div>
+    }
