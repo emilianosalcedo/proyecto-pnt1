@@ -6,6 +6,11 @@ table {
     background-color: #eea990;
 }
 
+tbody tr {
+    background-color: #6c757d;
+    color: #dee2e6;
+}
+
 .bottonEntidad {
     background-color: #aa6f73;
     font-weight: bold;

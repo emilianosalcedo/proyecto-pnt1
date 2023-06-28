@@ -11,6 +11,12 @@
     width: 100%;
 }
 
-    .bottonInicio:hover {
-        background-color: #eea990; /* Cambia el color al pasar el mouse sobre el botón */
+.bottonInicio:hover {
+    background-color: #eea990; /* Cambia el color al pasar el mouse sobre el botón */
+}
+
+@media only screen and (max-height: 800px) {
+    #logo {
+        width: 60%;
     }
+}
