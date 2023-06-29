@@ -69,5 +69,27 @@ namespace Peluqueria.Controllers
 
             return View(turnosPorServicio);
         }
+
+        public async Task<IActionResult> VisualizadorPreciosServiciosAsync()
+        {
+            var turnos = await _context.Turno.Include(t => t.Servicio).ToListAsync();
+
+            var serviciosIds = turnos.Select(t => t.ServicioId).Distinct().ToList();
+            var servicios = await _context.Servicio.Where(s => serviciosIds.Contains(s.Id)).ToListAsync();
+
+            var turnosPorServicio = turnos
+             .GroupBy(t => t.ServicioId)
+             .Select(g => new ServicioEstadistica(
+                 g.Count(),
+                 servicios.FirstOrDefault(s => s.Id == g.Key)?.Descripcion ?? string.Empty,
+                 g.Sum(t => servicios.FirstOrDefault(s => s.Id == g.Key)?.Precio ?? 0)
+             ))
+             .ToList();
+            var sumaTotal = turnosPorServicio.Sum(t => t.PrecioTotal);
+
+            ViewData["SumaTotal"] = sumaTotal;
+
+            return View(turnosPorServicio);
+        }
     }
 }

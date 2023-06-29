@@ -328,6 +328,7 @@ C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\n
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Index.cshtml.g.cs
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Visualizador\Index.cshtml.g.cs
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Visualizador\VisualizadorPeluquerosSolicitados.cshtml.g.cs
+C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Visualizador\VisualizadorPreciosServicios.cshtml.g.cs
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Visualizador\VisualizadorServiciosSolicitados.cshtml.g.cs
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Visualizador\VisualizadorTurnosSolicitados.cshtml.g.cs
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
@@ -340,4 +341,3 @@ C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\n
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.pdb
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.genruntimeconfig.cache
 C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Peluqueria.csproj.AssemblyReference.cache
-C:\Users\Abril\source\repos\proyecto-pnt1\Peluqueria_PNT1\Peluqueria\obj\Debug\netcoreapp3.1\Razor\Views\Visualizador\VisualizadorPreciosServicios.cshtml.g.cs
