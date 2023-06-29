@@ -20,9 +20,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Cliente)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Peluquero)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -41,9 +38,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Cliente.NombreCompleto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Peluquero.NombreCompleto)
             </td>
             <td class="contendorBotones">
                 @if (!item.Atendido)
