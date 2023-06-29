@@ -15,6 +15,7 @@ namespace Peluqueria.Models
         public int Id { get; set; }
         [DisplayName("Fecha y Hora")]
         public DateTime FechaHora { get; set; }
+        public string FechaHoraFormateada => FechaHora.ToString("dd/MM/yyyy hh:mm:ss");
         public bool Atendido { get; set; }
         public int ServicioId { get; set; }
         public Servicio Servicio { get; set; }
