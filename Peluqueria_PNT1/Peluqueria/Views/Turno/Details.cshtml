@@ -15,7 +15,7 @@
             @Html.DisplayNameFor(model => model.FechaHora)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.FechaHora)
+            @Html.DisplayFor(model => model.FechaHoraFormateada)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Atendido)
@@ -34,6 +34,12 @@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Cliente.NombreCompleto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Peluquero)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Peluquero.NombreCompleto)
         </dd>
     </dl>
 </div>
