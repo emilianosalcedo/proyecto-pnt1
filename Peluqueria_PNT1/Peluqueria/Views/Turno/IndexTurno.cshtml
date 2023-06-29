@@ -42,11 +42,11 @@
                 <td class="contendorBotones">
                     @if (!item.Atendido)
                     {
-                     <a style="width: 32%" asp-action="Delete" asp-route-id="@item.Id"><button class="bottonEntidad">Eliminar</button></a>
-                     <a style="width: 32%" asp-action="Edit" asp-route-id="@item.Id"><button class="bottonEntidad">Editar</button></a>
-                     }
-                    <a style="width: 32%" asp-action="Details" asp-route-id="@item.Id"><button class="bottonEntidad">Ver</button></a>
-
+                     <a style="width: 32%" asp-action="Delete" asp-route-id="@item.Id"><button class="bottonEntidad"><i class="fas fa-trash-alt"></i></button></a>
+                     <a style="width: 32%" asp-action="Edit" asp-route-id="@item.Id"><button class="bottonEntidad"><i class="fas fa-edit"></i></button></a>
+                    }
+                     <a style="width: 32%" asp-action="Details" asp-route-id="@item.Id"><button class="bottonEntidad"><i class="fas fa-eye"></i></button></a>
+                    
                 </td>
             </tr>}
     </tbody>
