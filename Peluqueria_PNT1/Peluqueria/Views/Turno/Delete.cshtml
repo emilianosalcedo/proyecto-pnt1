@@ -1,19 +1,12 @@
 ﻿@model Peluqueria.Models.Turno
-
-@{
-    ViewData["Title"] = "Delete";
-}
+@{ ViewData["Title"] = "Delete"; }
 @using Microsoft.AspNetCore.Http
 @using Newtonsoft.Json
+@{ var usuarioLogueado = Context.Session.GetString("Usuario");
+                var usuario = JsonConvert.DeserializeObject<Usuario>(usuarioLogueado); }
+<h1>Eliminar</h1>
 
-
-@{
-    var usuarioLogueado = Context.Session.GetString("Usuario");
-    var usuario = JsonConvert.DeserializeObject<Usuario>(usuarioLogueado);
-}
-<h1>Delete</h1>
-
-<h3>Are you sure you want to delete this?</h3>
+<h3>Esta seguro que quiere eliminar este Turno?</h3>
 <div>
     <h4>Turno</h4>
     <hr />
@@ -43,12 +36,9 @@
             @Html.DisplayFor(model => model.Cliente.NombreCompleto)
         </dd>
     </dl>
-
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Eliminar" class="btn btn-danger" /> |
-
-            <a asp-action="IndexTurno">Volver a la lista</a>
-
+        <a asp-action="IndexTurno">Volver a la lista</a>
     </form>
 </div>
