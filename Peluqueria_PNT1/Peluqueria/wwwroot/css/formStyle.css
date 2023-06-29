@@ -1,0 +1,17 @@
+﻿body {
+    background-color: #f6e0b5;
+}
+
+.bottonAccion {
+    background-color: #aa6f73;
+    font-weight: bold;
+    width: 100%;
+}
+
+    .bottonAccion:hover {
+        background-color: #eea990; /* Cambia el color al pasar el mouse sobre el botón */
+    }
+
+a{
+    color: black;
+}

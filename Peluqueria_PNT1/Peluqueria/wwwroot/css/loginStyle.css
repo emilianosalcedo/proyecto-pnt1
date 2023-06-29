@@ -1,0 +1,22 @@
+﻿body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6e0b5;
+}
+
+.bottonInicio {
+    background-color: #aa6f73;
+    font-weight: bold;
+    width: 100%;
+}
+
+.bottonInicio:hover {
+    background-color: #eea990; /* Cambia el color al pasar el mouse sobre el botón */
+}
+
+@media only screen and (max-height: 800px) {
+    #logo {
+        width: 60%;
+    }
+}

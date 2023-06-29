@@ -1,0 +1,13 @@
+[init]
+  defaultBranch = main
+[core]
+  editor = vi
+[credential]
+  helper = cache --timeout=10800
+[alias]
+  co = checkout
+  ci = commit
+  br = branch
+  dfs = diff --staged
+  logg = log --graph --decorate --oneline --abbrev-commit --all
+  branches = branch -a

@@ -1,0 +1,26 @@
+﻿nav {
+    background-color: #eea990;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #eea990;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.logoImage {
+    height: auto;
+    width: 100px;
+    max-width: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+#titulo {
+    color: #6c757d;
+}
