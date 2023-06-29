@@ -1,18 +1,15 @@
 ﻿@model Peluqueria.Models.Turno
-
 @{
     ViewData["Title"] = "Create";
 }
 @using Microsoft.AspNetCore.Http
 @using Newtonsoft.Json
-
-
 @{
     var usuarioLogueado = Context.Session.GetString("Usuario");
     var usuario = JsonConvert.DeserializeObject<Usuario>(usuarioLogueado);
 }
 <link rel="stylesheet" href="~/css/formStyle.css" />
-<h1>Create</h1>
+<h1>Crear</h1>
 
 <h4>Turno</h4>
 <hr />
@@ -25,58 +22,58 @@
                 case Rol.ADMINISTRADOR:
                     <div class="form-group">
                         <label asp-for="FechaHora" class="control-label">Fecha y hora</label>
-                        <input asp-for="FechaHora" class="form-control" required/>
+                        <input asp-for="FechaHora" class="form-control" required data-val-required="Por favor, ingresa la fecha y hora." />
                         <span asp-validation-for="FechaHora" class="text-danger"></span>
                     </div>
-                    <div class="form-group form-check">
+                    <div class="form-group form-check" style="display: none">
                         <label class="form-check-label">
-                            <input class="form-check-input" asp-for="Atendido" /> @Html.DisplayNameFor(model => model.Atendido)
+                            <input class="form-check-input" asp-for="Atendido" disabled /> @Html.DisplayNameFor(model => model.Atendido)
                         </label>
                     </div>
                     <div class="form-group">
                         <label asp-for="ServicioId" class="control-label">Servicio</label>
-                        <select asp-for="ServicioId" class="form-control" asp-items="ViewBag.ServicioId"></select>
+                        <select asp-for="ServicioId" class="form-control" asp-items="ViewBag.ServicioId" required data-val-required="Por favor selecciona un Servicio"></select>
                     </div>
                     <div class="form-group">
                         <label asp-for="ClienteId" class="control-label">Cliente</label>
-                        <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId"></select>
+                        <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId" required data-val-required="Por favor selecciona un Cliente"></select>
                     </div>
                     <div class="form-group">
                         <label asp-for="PeluqueroId" class="control-label">Peluquero</label>
-                        <select asp-for="PeluqueroId" class="form-control" asp-items="ViewBag.PeluqueroId"></select>
+                        <select asp-for="PeluqueroId" class="form-control" asp-items="ViewBag.PeluqueroId" required data-val-required="Por favor selecciona un Peluquero"></select>
                     </div>
 
                     break;
                 case Rol.CLIENTE:
                     <div class="form-group">
                         <label asp-for="FechaHora" class="control-label">Fecha y hora</label>
-                        <input asp-for="FechaHora" class="form-control" required/>
+                        <input asp-for="FechaHora" class="form-control" required data-val-required="Por favor, ingresa la fecha y hora."/>
                         <span asp-validation-for="FechaHora" class="text-danger"></span>
                     </div>
 
                     <div class="form-group">
                         <label asp-for="ServicioId" class="control-label">Servicio</label>
-                        <select asp-for="ServicioId" class="form-control" asp-items="ViewBag.ServicioId"></select>
+                        <select asp-for="ServicioId" class="form-control" asp-items="ViewBag.ServicioId" required data-val-required="Por favor selecciona un Servicio"></select>
                     </div>
 
                     <div class="form-group">
                         <label asp-for="PeluqueroId" class="control-label">Peluquero</label>
-                        <select asp-for="PeluqueroId" class="form-control" asp-items="ViewBag.PeluqueroId"></select>
+                        <select asp-for="PeluqueroId" class="form-control" asp-items="ViewBag.PeluqueroId" required data-val-required="Por favor selecciona un Peluquero"></select>
                     </div>
                     break;
                 case Rol.PELUQUERO:
                     <div class="form-group">
                         <label asp-for="FechaHora" class="control-label">Fecha y hora</label>
-                        <input asp-for="FechaHora" class="form-control" required/>
+                        <input asp-for="FechaHora" class="form-control" required data-val-required="Por favor, ingresa la fecha y hora."/>
                         <span asp-validation-for="FechaHora" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="ServicioId" class="control-label">Servicio</label>
-                        <select asp-for="ServicioId" class="form-control" asp-items="ViewBag.ServicioId"></select>
+                        <select asp-for="ServicioId" class="form-control" asp-items="ViewBag.ServicioId" required data-val-required="Por favor selecciona un Servicio"></select>
                     </div>
                     <div class="form-group">
                         <label asp-for="ClienteId" class="control-label">Cliente</label>
-                        <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId"></select>
+                        <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId" required data-val-required="Por favor selecciona un Cliente"></select>
                     </div>
                     break;
             }
@@ -86,12 +83,9 @@
         </form>
     </div>
 </div>
-
 <div>
         <a asp-action="IndexTurno">Volver a la lista</a>
-
 </div>
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
             }

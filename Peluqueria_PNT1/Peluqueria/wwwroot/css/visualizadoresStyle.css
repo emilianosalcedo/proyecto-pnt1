@@ -1,0 +1,20 @@
+﻿body {
+    background-color: #f6e0b5;
+}
+
+.visualizador {
+    background-color: #aa6f73;
+    font-weight: bold;
+}
+
+a {
+    color: black;
+}
+
+    a:hover {
+        color: #f6e0b5;
+    }
+
+table {
+    background-color: #aa6f73;
+}

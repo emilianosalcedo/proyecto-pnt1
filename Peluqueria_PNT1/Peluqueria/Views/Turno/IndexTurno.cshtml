@@ -1,11 +1,7 @@
 ﻿@model IEnumerable<Peluqueria.Models.Turno>
-
-@{
-    ViewData["Title"] = "Index";
-}
+@{ ViewData["Title"] = "Index"; }
 <link rel="stylesheet" href="~/css/indexStyle.css" />
 <h1>Turnos</h1>
-
 <p>
     <a asp-action="Create">Crear nuevo turno</a>
 </p>
@@ -24,39 +20,34 @@
             <th>
                 @Html.DisplayNameFor(model => model.Cliente)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Peluquero)
-            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaHoraFormateada)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Atendido)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Servicio.Descripcion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cliente.NombreCompleto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Peluquero.NombreCompleto)
-            </td>
-            <td>
-                @if (!item.Atendido)
-                {
-                    <a style="width: 32%" asp-action="Delete" asp-route-id="@item.Id"><button class="bottonEntidad">Eliminar</button></a>
-                    <a style="width: 32%" asp-action="Edit" asp-route-id="@item.Id"><button class="bottonEntidad">Editar</button></a>
-                }
-                <a style="width: 32%" asp-action="Details" asp-route-id="@item.Id"><button class="bottonEntidad">Ver</button></a>
-        </tr>
-        }
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaHora)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Atendido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Servicio.Descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cliente.NombreCompleto)
+                </td>
+                <td class="contendorBotones">
+                    @if (!item.Atendido)
+                    {
+                     <a style="width: 32%" asp-action="Delete" asp-route-id="@item.Id"><button class="bottonEntidad">Eliminar</button></a>
+                     <a style="width: 32%" asp-action="Edit" asp-route-id="@item.Id"><button class="bottonEntidad">Editar</button></a>
+                     }
+                    <a style="width: 32%" asp-action="Details" asp-route-id="@item.Id"><button class="bottonEntidad">Ver</button></a>
+
+                </td>
+            </tr>}
     </tbody>
 </table>

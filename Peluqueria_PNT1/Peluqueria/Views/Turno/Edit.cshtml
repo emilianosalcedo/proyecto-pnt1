@@ -1,18 +1,15 @@
 ﻿@model Peluqueria.Models.Turno
-
 @{
     ViewData["Title"] = "Edit";
 }
 @using Microsoft.AspNetCore.Http
 @using Newtonsoft.Json
-
-
 @{
     var usuarioLogueado = Context.Session.GetString("Usuario");
     var usuario = JsonConvert.DeserializeObject<Usuario>(usuarioLogueado);
 }
 <link rel="stylesheet" href="~/css/formStyle.css" />
-<h1>Edit</h1>
+<h1>Editar</h1>
 
 <h4>Turno</h4>
 <hr />
@@ -113,12 +110,9 @@
         </form>
     </div>
 </div>
-
 <div>
         <a asp-action="IndexTurno">Volver a la lista</a>
-
 </div>
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
             }
