@@ -88,11 +88,6 @@ namespace Peluqueria.Controllers
 
             if (rol != Rol.ADMINISTRADOR) {
                 turno.Atendido = false;
-                var turnoEncontrado = _context.Turno.FirstOrDefault(t => (t.FechaHora == turno.FechaHora && t.ClienteId == turno.ClienteId) || (t.FechaHora == turno.FechaHora && t.PeluqueroId == turno.PeluqueroId));
-                if (turnoEncontrado != null)
-                    ModelState.AddModelError("", "Ese turno esta ocupado.");
-                if (turno.FechaHora < DateTime.Now)
-                    ModelState.AddModelError("", "La fecha deberia ser mayor al dia de hoy.");
             }
             if (rol == Rol.CLIENTE)
             {
@@ -101,6 +96,12 @@ namespace Peluqueria.Controllers
             else if (rol == Rol.PELUQUERO) {
                 turno.PeluqueroId = usuario.Id;
             }
+
+            var turnoEncontrado = _context.Turno.FirstOrDefault(t => (t.FechaHora == turno.FechaHora && t.ClienteId == turno.ClienteId) || (t.FechaHora == turno.FechaHora && t.PeluqueroId == turno.PeluqueroId));
+            if (turnoEncontrado != null)
+                ModelState.AddModelError("", "Ese turno esta ocupado.");
+            if (turno.FechaHora < DateTime.Now)
+                ModelState.AddModelError("", "La fecha deberia ser mayor al dia de hoy.");
 
             if (ModelState.IsValid)
             {
@@ -145,6 +146,12 @@ namespace Peluqueria.Controllers
             string usuarioLogueado = HttpContext.Session.GetString("Usuario");
             Usuario usuario = JsonConvert.DeserializeObject<Usuario>(usuarioLogueado);
             Rol rol = usuario.Rol;
+
+            var turnoEncontrado = _context.Turno.FirstOrDefault(t => (t.FechaHora == turno.FechaHora && t.ClienteId == turno.ClienteId) || (t.FechaHora == turno.FechaHora && t.PeluqueroId == turno.PeluqueroId));
+            if (turnoEncontrado != null)
+                ModelState.AddModelError("", "Ese turno esta ocupado.");
+            if (turno.FechaHora < DateTime.Now)
+                ModelState.AddModelError("", "La fecha deberia ser mayor al dia de hoy.");
 
             if (rol == Rol.CLIENTE)
             {
