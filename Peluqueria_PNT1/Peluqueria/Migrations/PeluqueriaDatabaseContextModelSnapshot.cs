@@ -35,8 +35,8 @@ namespace Peluqueria.Migrations
                     b.Property<double>("Precio")
                         .HasColumnType("float");
 
-                    b.Property<string>("Tipo")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Tipo")
+                        .HasColumnType("int)");
 
                     b.HasKey("Id");
 

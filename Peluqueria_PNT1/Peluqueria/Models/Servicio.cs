@@ -12,7 +12,9 @@ namespace Peluqueria.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string Tipo { get; set; }
+
+        [EnumDataType(typeof(TipoServicio))]
+        public TipoServicio Tipo { get; set; }
         public double Precio { get; set; }
         public string Descripcion { get; set; }
         public int Duracion { get; set; }

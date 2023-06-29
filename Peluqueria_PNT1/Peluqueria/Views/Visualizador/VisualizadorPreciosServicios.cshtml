@@ -1,6 +1,53 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<ServicioEstadistica>
+
 @{
+    ViewData["Title"] = "Index";
 }
 <link rel="stylesheet" href="~/css/visualizadoresStyle.css">
+<h1>VISUALIZADOR:</h1>
+<h2>PRECIOS TOTALES POR SERVICIO</h2>
+<canvas id="myChart"></canvas>
+<h3>Suma Total: $@ViewData["SumaTotal"]</h3>
+@section Scripts {
+
+    <script>
+        // Obtener los datos del modelo y convertirlos en arreglos separados
+        var servicios = @Html.Raw(Json.Serialize(Model.Select(s => s.Servicio)));
+        var preciosTotales = @Html.Raw(Json.Serialize(Model.Select(s => s.PrecioTotal)));
+
+        // Configurar el gráfico
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var colores = ['rgba(75, 192, 192, 0.2)'];
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: servicios,
+                datasets: [{
+                    label: 'Precio Total',
+                    data: preciosTotales,
+                    backgroundColor: colores,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        precision: 0,
+                        callback: function (value) {
+                            return '$' + value;
+                        }
+                    }
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function (tooltipItem) {
+                            return '$' + tooltipItem.value;
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+}
